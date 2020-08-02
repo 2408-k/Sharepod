@@ -1,0 +1,230 @@
+@media screen and (min-width: 768px) {
+.navit{
+	width: auto;
+	margin-left: 61%;
+}
+.roomcj{
+	margin-top: 35%;
+	margin-left: 1%;
+}
+
+}
+@media screen and (max-width: 768px) {
+.tabli{
+	overflow-x: scroll;
+}
+.roomcj{
+	margin-left: 19%;
+}
+.butcr{
+	margin-top: 0px !important;
+}
+.butjr{
+	margin-top: 0px !important;
+	width: 72.672px;
+	height: 37px;
+	font-size: 0.82em;
+	padding-top: 2px !important;
+}
+}
+@media screen and (min-width: 1300px) {
+.navit{
+	width: auto;
+	margin-left: 70%;
+}
+}
+@media screen and (max-width: 370px) {
+.pici{
+padding-left: 5px !important;
+}
+.buts
+{
+	padding-left: 0px !important;
+}
+}
+@media screen and (max-width: 330px) {
+.pici{
+padding-left: 0px !important;
+}
+}
+@media screen and (min-width: 450px) and (max-width: 767px) {
+.pici{
+padding-left: 15% !important;
+}
+}
+html, body{min-height:100%;}
+body{height:100vh;}
+body{
+	height: 100%;
+}
+/*tablets*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body{
+  	height: 100vh;
+  }
+ 
+  .roomi{
+  	margin-top: 10% !important;
+  	margin-bottom: 10% !important;
+
+  }
+    .profi{
+  	margin-top: 7% !important;
+  		margin-bottom: 7% !important;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+ 
+  body{
+  	height: 100vh;
+
+  }
+  .profi{
+  	margin-top: 7% !important;
+  	margin-bottom: 7% !important;
+  }
+    .roomi{
+  	margin-top: 10% !important;
+  	margin-bottom: 10% !important;
+  }
+}
+/*ipad pro landscape*/
+@media (min-width: 1366px) and (max-height: 1024px) and (orientation: landscape) {
+  
+ 
+  body{
+  	height: 100vh;
+
+  }
+  .profi{
+  	margin-top: 7% !important;
+  	margin-bottom: 7% !important;
+  }
+    .roomi{
+  	margin-top: 10% !important;
+  	margin-bottom: 10% !important;
+  }
+}
+
+/*ipad  and ipad pro portrait */
+@media (min-height:  1024px) and (max-height: 1366px) {
+  body{
+  	height: 100vh;
+  }
+ .ipad{
+ 	margin-top: 5% !important;
+ }
+  .roomi{
+  	margin-top: 12% !important;
+  	margin-bottom: 12% !important;
+
+  }
+    .profi{
+  	margin-top: 10% !important;
+  		margin-bottom: 10% !important;
+  }
+  .norf{
+  	margin-top: 10% !important;
+  }
+}
+
+/*correct ipad buttons*/
+@media (max-width:  768px) and (min-height: 1024px) {
+  .butjr{
+  	padding: 0;
+  }
+  .butcr{
+  	margin-top: 30% !important;
+  	width: 72.672px !important;
+	height: 37px !important;
+  }
+}
+
+/*footer fix ipad pro*/
+@media (min-width:  1024px) and (min-height: 1366px) {
+  .norf{
+  	margin-top: 34% !important;
+  }
+  .roomi{
+  	margin-top: 17% !important;
+  }
+}
+
+body{
+background-color:#1e698d;
+}
+.sep{
+ position: relative; 
+            top: 20px; 
+            border: none; 
+            height: 12px; 
+            background: #b5b2a8; 
+            margin-bottom: 50px;
+}
+@media screen and (max-width:719px )
+{
+  .clasu{
+      padding-left: 10%!important;
+      margin-bottom: 5% !important;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+body{
+background-color:#1e698d;
+}
+@media screen and (max-width: 720px){
+  .stats{
+  margin-top: 19.6%!important;
+  margin-left: 3%!important;
+  
+}
+.litu{
+  text-align: left!important;
+  padding-left: 0!important;
+}
+.heado{
+  display: inline!important;
+}
+.buto{
+  margin-left: 30%!important;
+}
+}
+@media screen and (min-width: 721px){
+  .stats{
+  margin-top: 5.6%!important;
+  margin-left: 7%!important;
+}
+.itu{
+  width: 75%!important;
+  margin-left: 10%!important;
+}
+.addu{
+  width: 60%!important;
+}
+.add{
+  margin-left: 25%!important;
+}
+.heado{
+  margin-left: 10%!important;
+}
+.buto{
+  margin-left: 54%!important;
+}
+}

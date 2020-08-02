@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sharepod | Delete Items</title>
+		<!--bootstrap-->
+  
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+      <!--googlefonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src=" 
+https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+    </script>  <!--jquery-->
+    <link rel="stylesheet" type="text/css" href="/css/delete/cdel.css"> <!--local stylesheet-->
+</head>
+<body style="background-color: #1e698d;font-family: 'Noto Sans JP', sans-serif;">
+<div >
+	<!--navbar-->
+  <div class="container-fluid">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top" style="width: 100%;background-color:#003152!important;">
+	<div class="container-fluid">
+		<a href="/" style="color:#272829;"><h2 style="font-family: 'Titillium Web', sans-serif;font-size: 1.4em;color:#fcfcfc;">SharePod</h2></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+<div class="collapse navbar-collapse navup navit" id="navbarResponsive">
+	 <ul class="navbar-nav " align="right">
+     
+	<li class="nav-item mr-auto">
+        <a class="nav-link" href="/home" style="color: #dee2e3;">Home<span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item mr-auto">
+        <a class="nav-link" href="/profile" style="color: #dee2e3;"><%=firstName%><span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item mr-auto">
+        <a class="nav-link" href="/logout" style="color: #dee2e3;">Log out<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+</div>
+</nav>
+</div>
+<br>
+  <div class="container">
+	<!--my room-->
+  <h2 class="heado" style="display: inline;color: #dee2e3;">Delete Items</h2>
+  <form style="display: inline;" action="/done-delete" method="POST">
+    <input type="hidden" name="roomName" value="<%= roomName %>">
+    <input type="hidden" name="roomid" value="<%= roomid %>">
+   <button type="submit" class=" buto btn btn-info">Done</button>
+  </form>
+  <br>
+  <br>
+        <div style="width:95%;overflow-y: scroll;height: 20em;background-color: #c2d5db!important;" class="itu">
+      <table class="table table-hover" style="margin-top: 0%;margin-bottom: 2%; width: 100%;">
+          <thead>
+    <tr>
+      <th scope="col" style=" position: sticky;width: 40%!important;
+  top: 0; background-color:rgba(0,49,82,0.8);color: #dee2e3;">OrderId</th>
+   <th scope="col" style=" position: sticky;width: 10%!important;
+  top: 0; background-color:rgba(0,49,82,0.8);color: #dee2e3;">Delete</th>
+   
+    </tr>
+  </thead>
+  <tbody style="color: black;">
+    
+   <% if(typeof(items)==="undefined" || items.length===0 ){ %>
+   <tr><td colspan="2">No items to delete</td></tr>
+   <% }else{ %>
+  <% for(var i=0 ; i<items.length ; i++){ %>
+  <tr class="breakrow">
+    <td><%=items[i].orderid%></td>
+    <td> <form style="display: inline;" action="/delete" method="POST">
+        <input type="hidden" name="roomName" value="<%=roomName%>">
+         <input type="hidden" name="itemID" value="<%=items[i]._id%>">
+         <input type="hidden" name="roomid" value="<%=roomid%>">
+         <button type="submit" class="btn btn-info"><img class="down" src="/images/delete/down.png" style="width: 4vh;height: 1.5%;"></button>
+          </form>
+       </td>
+     </tr>
+     <tr class="datarow" style="display: none;">
+      <td  colspan="4">
+         Item Description:<%= items[i].itemDescription %>
+      </td></tr>
+     <% } }%>
+  </tbody>
+</table>
+</div>
+<!--add item-->
+	</div>
+	<!--end of rooms box-->
+</div>
+<hr class="norf sep">
+<div class="container">
+   <div class="row">
+     <div class="col-12 col-md-4 clasu " style="color: #a3a3a3;">
+          <a href="/" style="color:#272829;"><h1 style="font-family: 'Titillium Web', sans-serif;font-size: 2em;color:#fcfcfc;">SharePod</h1></a>
+        <h4 style="font-size:1em;">Queries?</h4>
+        <h4 style="font-size:1em;">Contact us at :</h4>
+        <h4 style="font-size:1em;">sharepod@gmail.com</h4>
+     </div>
+     <div class=" col-12 col-md-8 row">
+      <div class="col-5">
+        <ul style="padding-left: 20%;padding-right: 20%; text-align: center;list-style: none;">
+              <h3 style="font-size:1em; text-align: left;color: #a3a3a3;">  <strong>KRISHNA KISHORE</strong> </h3>
+        <li style="color: black;font-size: 1em;text-align: left;" ><a style="color: #a3a3a3;" href="https://www.instagram.com/krishnakishore.s/">
+INSTAGRAM
+</a>
+</li>
+        <li style="color: black;font-size: 1em;text-align: left;" ><a style="color: #a3a3a3;" href="https://www.facebook.com/krishna.kishoremvm/">
+FACEBOOK
+</a>
+<li style="color: black;font-size: 1em;text-align: left;"><a  style="color: #a3a3a3;" href="https://github.com/2408-k">
+GITHUB
+</a>
+</li>
+  <li style="color: black;font-size: 1em;text-align: left;" ><a  style="color: #a3a3a3;" href="https://www.linkedin.com/in/krishna-kishore-s-6a2a65195/">
+LINKEDIN
+</a>
+</li>
+  </ul>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-5"><ul style="padding-left: 20%;padding-right: 20%; text-align: center;list-style: none;">
+              <h3 style="font-size:1em; text-align: left;color: #a3a3a3;"> <strong> PRATEEK SHARMA</strong></h3>
+        <li style="color: black;font-size: 1em;text-align: left;" ><a style="color: #a3a3a3;"  href="https://www.instagram.com/prateeksharm.a/">
+INSTAGRAM
+</a>
+</li>
+        <li style="color: black;font-size: 1em;text-align: left;" ><a  style="color: #a3a3a3;" href="https://www.facebook.com/prateek.sharma.94849">
+FACEBOOK
+</a>
+<li style="color: black;font-size: 1em;text-align: left;"><a style="color: #a3a3a3;"  href="https://github.com/prateek1106">
+GITHUB
+</a>
+</li>
+  <li style="color: black;font-size: 1em;text-align: left;" ><a  style="color: #a3a3a3;" href="https://www.linkedin.com/in/prateek-sharma-0507a6193/">
+LINKEDIN
+</a>
+</li>
+  </ul></div>
+     </div>
+   </div>
+    <footer style="text-align: center;color: #a3a3a3;">&copy; Copyright 2020</footer>
+</div>
+</div>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/delete/jdel.js"></script>
+<script>
+        $( document ).ready(function() {
+            //$('.breakrow').click(function(){
+      $('#tableMain').on('click', 'tr.breakrow',function(){
+                $(this).nextUntil('tr.breakrow').slideToggle(200);
+            });
+        });
+    </script>
+
+
+</body>
+</html>
